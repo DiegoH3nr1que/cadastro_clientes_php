@@ -17,6 +17,7 @@ class ClienteController extends Controller
         $data = $request->validate([
             'nome' => 'required|string',
             'email' => 'required|email|unique:clientes',
+            'telefone' =>'nullable|string',
         ]);
 
         $data['data_cadastro'] = now();
