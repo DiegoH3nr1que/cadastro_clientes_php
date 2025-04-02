@@ -15,7 +15,7 @@ export default function Home() {
         onClick={handleRedirect}
         className="bg-blue-400 text-black font-sans px-6 py-3 rounded"
       >
-        Cadastrar seus clientes
+        Cadastrar Clientes
       </button>
     </main>
   );
