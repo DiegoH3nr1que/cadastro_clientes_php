@@ -49,4 +49,17 @@ class ClienteController extends Controller
 
         return response()->json($cliente, 201);
     }
+
+    public function destroy($id)
+    {
+        $cliente = Cliente::find($id);
+
+        if (!$cliente) {
+            return response()->json(['message' => 'Cliente não encontrado'], 404);
+        }
+
+        $cliente->delete();
+
+        return response()->json(['message' => 'Cliente deletado com sucesso'], 200);
+    }
 }
